@@ -1,0 +1,98 @@
+disabled_rules: # rule identifiers to exclude from running
+  - colon
+  - comma
+  - control_statement
+  - opening_brace
+  - trailing_whitespace
+opt_in_rules: # some rules are only opt-in
+  - yoda_condition
+  - xct_specific_matcher
+  - vertical_whitespace_opening_braces
+  - vertical_whitespace_closing_braces
+  - vertical_parameter_alignment_on_call
+  - vertical_parameter_alignment
+  - unowned_variable_capture
+  - unused_declaration
+  - unused_import
+  - type_contents_order
+  - trailing_closure
+  - toggle_bool
+  - switch_case_on_newline
+  - strong_iboutlet
+  - single_test_class
+  - operator_usage_whitespace
+  - private_action
+  - private_outlet
+  - pattern_matching_keywords
+  - multiline_arguments
+  - multiline_parameters
+  - modifier_order
+  - let_var_whitespace
+  - empty_count
+  - empty_string
+  - empty_xctest_method
+  - file_name
+  - convenience_type
+  - collection_alignment
+  - conditional_returns_on_newline
+  - anyobject_protocol
+  # Find all the available rules by running:
+  # swiftlint rules
+included: # paths to include during linting. `--path` is ignored if present.
+  - ./
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+  - Pods
+analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
+  - explicit_self
+
+# configurable rules can be customized from this configuration file
+# binary rules can set their severity level
+force_cast: warning # implicitly
+force_try:
+  severity: warning # explicitly
+# rules that have both warning and error levels, can set just the warning level
+# implicitly
+line_length: 120
+# they can set both implicitly with an array
+type_body_length:
+  - 300 # warning
+  - 400 # error
+# or they can set both explicitly
+file_length:
+  warning: 500
+  error: 1200
+# naming rules can set warnings/errors for min_length and max_length
+# additionally they can set excluded names
+type_name:
+  min_length: 4 # only warning
+  max_length: # warning and error
+    warning: 40
+    error: 50
+  excluded: iPhone # excluded via string
+switch_case_alignment:
+    indented_cases: true
+large_tuple:
+    - 4
+identifier_name:
+  min_length: # only min_length
+    error: 3 # only error
+  allowed_symbols:
+    "_"
+  excluded: # excluded via string array
+    - x
+    - y
+    - i
+    - _
+    - vc
+    - id
+    - to
+    - it
+type_contents_order:
+  warning, order: [[SwiftLintFramework.TypeContent.case], [SwiftLintFramework.TypeContent.typeAlias, SwiftLintFramework.TypeContent.associatedType], [SwiftLintFramework.TypeContent.subtype],
+     [SwiftLintFramework.TypeContent.typeProperty], [SwiftLintFramework.TypeContent.instanceProperty],
+     [SwiftLintFramework.TypeContent.ibInspectable], [SwiftLintFramework.TypeContent.ibOutlet],
+     [SwiftLintFramework.TypeContent.typeMethod], [SwiftLintFramework.TypeContent.initializer],
+     [SwiftLintFramework.TypeContent.deinitializer], [SwiftLintFramework.TypeContent.subscript],
+     [SwiftLintFramework.TypeContent.viewLifeCycleMethod], [SwiftLintFramework.TypeContent.ibAction],
+     [SwiftLintFramework.TypeContent.otherMethod]]
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle, junit, html, emoji, sonarqube, markdown)
