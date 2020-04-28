@@ -135,9 +135,9 @@ Press the ‘i’ key to enter insert mode then move the cursor a new line and a
 >
 >export PATH=$JAVA_HOME/bin:/opt/apache-maven/bin:$ANDROID_SDK/emulator:$ANDROID_SDK/platform-tools:$ANDROID_SDK/tools:$ANDROID_HOME/emulator
 
-Make sure you have exact same order of params in PATH. The params makes a difference what is used first and if it's different from what you see above some of the commands like 'adb' or 'emulator' might not as expected.
+Make sure you have exact same order as params in the PATH. The params order has an impact on what is used first. If yours is different from what you see above - some of the commands like 'adb' or 'emulator' might not work as expected.
 Press the ‘esc’ key and then type ‘:wq’ and press enter to save and quit vim.
-Restart terminal to pickup the new .bash_profile then run the following commands to check that it do not throw an error:
+Restart terminal to pickup the new .bash_profile then run the following commands to check that it does not throw an error:
 >adb
 >
 >emulator
