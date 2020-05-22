@@ -1,4 +1,4 @@
-#Lohika Mobile UI Automation Readme
+#Mobile UI Automation Readme
 
 Table of contents
 =================
@@ -366,8 +366,8 @@ This file contains different configuration and test data like name and password 
 ```
 user_one=akosatuchenko
 user_one_password=
-app_package=com.lohika.parksharing
-app_activity=com.lohika.parking.main.MainActivity
+app_package=com.sserhii.parksharing
+app_activity=com.sserhii.parking.main.MainActivity
 android_app_keyword=.apk
 ios_app_keyword=.app
 android_device_name=Pixel

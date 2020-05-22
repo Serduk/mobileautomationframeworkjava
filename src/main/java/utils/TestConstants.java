@@ -13,8 +13,8 @@ import lombok.Getter;
  *
  * {@code user_one} - username
  * {@code ser_one_password} - user password
- * {@code app_package} - package name of test app for the android platform (i.e. com.lohika.parksharing)
- * {@code ios_bundle_id} - package name of test app for the iOS platform (i.e. com.lohika.Parksharing)
+ * {@code app_package} - package name of test app for the android platform (i.e. com.sserhii.parksharing)
+ * {@code ios_bundle_id} - package name of test app for the iOS platform (i.e. com.sserhii.Parksharing)
  */
 public class TestConstants {
 
